@@ -36,13 +36,6 @@
       margin-bottom: 40px;
     }
     
-    .form-title {
-      font-size: 24px;
-      margin-bottom: 15px;
-      text-align: center;
-      font-weight: 500;
-    }
-    
     .form-input {
       width: 100%;
       padding: 15px;
@@ -86,6 +79,18 @@
       font-weight: 300;
       line-height: 1.5;
     }
+    
+    .form-check {
+      margin-bottom: 20px;
+    }
+
+    .form-check-input {
+      margin-right: 10px;
+    }
+    
+    .form-check-label {
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +98,6 @@
     <div class="logo"></div>
   
     <div class="contact-form">
-      <h2 class="form-title"> </h2>
       <form action="https://formspree.io/f/xdovrkgv" method="POST">
         <label>
           Nom:
@@ -113,8 +117,22 @@
         </label>
         <label>
           Atelier souhaité:
-          <input type="text" name="atelier" class="form-input">
+          <select name="atelier" class="form-input">
+            <option value="photo">Photo</option>
+            <option value="video">Vidéo</option>
+            <option value="cloud">Cloud</option>
+            <option value="bureautique">Bureautique</option>
+            <option value="autres">Autres</option>
+          </select>
         </label>
+        <label>
+          Soumettez vos idées:
+          <textarea name="idees" class="form-input"></textarea>
+        </label>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="check1" name="rgpd">
+          <label class="form-check-label" for="check1">J'accepte les conditions générales et la politique de confidentialité.</label>
+        </div>
         <input type="hidden" name="_subject" value="New form submission">
         <input type="hidden" name="_next" value="https://votre-site-web.com/merci.html">
         <input type="hidden" name="_cc" value="beilvert.a@dxm.fr">
@@ -122,10 +140,12 @@
       </form>
     </div>
   
-    <h2>Coordonnées</h2>
-    <p><strong>Adresse :</strong> 3 allées des tanneurs, Nantes, France</p>
-    <p><strong>Téléphone :</strong> 02 28 03 17 90</p>
-    <p><strong>Email :</strong> nantes@dxm.fr</p>
+    <div class="contact-details">
+      <h2>Coordonnées</h2>
+      <p><strong>Adresse :</strong> 3 allées des tanneurs, Nantes, France</p>
+      <p><strong>Téléphone :</strong> 02 28 03 17 90</p>
+      <p><strong>Email :</strong> nantes@dxm.fr</p>
+    </div>
   </div>
 </body>
 </html>
