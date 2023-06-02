@@ -4,24 +4,32 @@
   <title>DXM - Atelier</title>
   <style>
     body {
-      background: linear-gradient(45deg, #000, #333);
-      color: #fff;
-      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
+      color: #333;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
     
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
-    
-    h1 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
+
+    .logo {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url('logo.png') no-repeat center;
+      width: 300px;
+      height: 100px;
+      background-size: contain;
     }
     
     .contact-form {
@@ -30,39 +38,59 @@
     
     .form-title {
       font-size: 24px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       text-align: center;
+      font-weight: 500;
     }
     
     .form-input {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: none;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: #000;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      color: #333;
+      font-size: 16px;
     }
     
     .form-input:focus {
       outline: none;
-      background-color: rgba(255, 255, 255, 1);
+      border-color: #999;
     }
     
     .form-button {
       width: 100%;
-      padding: 10px;
-      background-color: #fff;
-      color: #333;
+      padding: 15px;
+      background-color: #007BFF;
+      color: #fff;
       border: none;
       text-transform: uppercase;
       font-weight: bold;
       cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .form-button:hover {
+      background-color: #0056b3;
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>DXM</h1>
+    <div class="logo"></div>
   
     <div class="contact-form">
       <h2 class="form-title">Inscription à l'atelier</h2>
