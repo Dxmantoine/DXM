@@ -24,24 +24,6 @@
       text-transform: uppercase;
     }
     
-    .logo {
-      text-align: center;
-      margin-bottom: 20px;
-      position: relative;
-      overflow: hidden;
-      width: 200px;
-      height: 200px;
-    }
-    
-    .logo img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: auto;
-    }
-    
     .contact-form {
       margin-bottom: 40px;
     }
@@ -80,18 +62,34 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-    </div>
-  
     <h1>DXM</h1>
   
     <div class="contact-form">
-      <h2 class="form-title">Inscription</h2>
-      <form action="traitement.php" method="post">
-        <input type="text" class="form-input" name="nom" placeholder="Nom">
-        <input type="email" class="form-input" name="email" placeholder="Email">
-        <input type="tel" class="form-input" name="telephone" placeholder="Numéro de téléphone">
-        <textarea class="form-input" name="message" placeholder="Message"></textarea>
+      <h2 class="form-title">Inscription à l'atelier</h2>
+      <form action="https://formspree.io/f/xdovrkgv" method="POST">
+        <label>
+          Nom:
+          <input type="text" name="nom" class="form-input">
+        </label>
+        <label>
+          Prénom:
+          <input type="text" name="prenom" class="form-input">
+        </label>
+        <label>
+          Mail:
+          <input type="email" name="email" class="form-input">
+        </label>
+        <label>
+          Téléphone:
+          <input type="text" name="telephone" class="form-input">
+        </label>
+        <label>
+          Atelier souhaité:
+          <input type="text" name="atelier" class="form-input">
+        </label>
+        <input type="hidden" name="_subject" value="New form submission">
+        <input type="hidden" name="_next" value="https://votre-site-web.com/merci.html">
+        <input type="hidden" name="_cc" value="beilvert.a@dxm.fr">
         <button class="form-button" type="submit">Envoyer</button>
       </form>
     </div>
@@ -101,3 +99,5 @@
     <p><strong>Téléphone :</strong> 02 28 03 17 90</p>
     <p><strong>Email :</strong> nantes@dxm.fr</p>
   </div>
+</body>
+</html>
