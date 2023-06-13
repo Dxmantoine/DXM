@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>DXM - Atelier</title>
-   <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
   <style>
     body {
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
@@ -32,11 +32,11 @@
       height: 100px;
       background-size: contain;
     }
-    
+
     .contact-form {
       margin-bottom: 40px;
     }
-    
+
     .form-input {
       width: 100%;
       padding: 15px;
@@ -46,12 +46,12 @@
       color: #333;
       font-size: 16px;
     }
-    
+
     .form-input:focus {
       outline: none;
       border-color: #999;
     }
-    
+
     .form-button {
       width: 100%;
       padding: 15px;
@@ -64,23 +64,23 @@
       border-radius: 10px;
       transition: background-color 0.3s ease;
     }
-    
+
     .form-button:hover {
       background-color: #0056b3;
     }
-    
+
     h2 {
       font-size: 24px;
       font-weight: 500;
       margin-bottom: 20px;
     }
-    
+
     p {
       font-size: 16px;
       font-weight: 300;
       line-height: 1.5;
     }
-    
+
     .form-check {
       margin-bottom: 20px;
     }
@@ -88,11 +88,11 @@
     .form-check-input {
       margin-right: 10px;
     }
-    
+
     .form-check-label {
       font-size: 14px;
     }
-    
+
     /* Parallax container */
     .parallax {
       /* The image used */
@@ -107,12 +107,40 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    /* Equipment Section */
+    .equipment-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .equipment-item {
+      flex: 1;
+      margin: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .equipment-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transform: scale(1.1);
+      transition: transform 0.5s ease-out;
+    }
+
+    .equipment-item:hover img {
+      transform: scale(1);
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="logo"></div>
-  
+
     <div class="contact-form">
       <form action="https://formspree.io/f/xdovrkgv" method="POST">
         <label>
@@ -155,9 +183,31 @@
         <button class="form-button" type="submit">Envoyer</button>
       </form>
     </div>
-  
+
     <!-- Parallax Section -->
     <div class="parallax"></div>
+
+    <!-- Equipment Section -->
+    <section class="equipment-container">
+      <h2>Matériel utilisé lors de nos ateliers</h2>
+      <div class="equipment-item">
+        <img src="https://github.com/atelierdxm/dxm/blob/main/mac.jpg" alt="Image du MacBook">
+        <h3>MacBook</h3>
+        <p>Le MacBook est un outil essentiel pour notre équipe et nos clients.</p>
+      </div>
+      
+      <div class="equipment-item">
+        <img src="https://github.com/atelierdxm/dxm/blob/main/iphone.jpg" alt="Image de l'iPhone">
+        <h3>iPhone</h3>
+        <p>L'iPhone est le compagnon mobile idéal pour nos ateliers.</p>
+      </div>
+
+      <div class="equipment-item">
+        <img src="https://github.com/atelierdxm/dxm/blob/main/ipad.jpg" alt="Image de l'iPad">
+        <h3>iPad</h3>
+        <p>L'iPad offre une grande surface de travail pour nos ateliers créatifs.</p>
+      </div>
+    </section>
 
     <!-- Boutique en ligne Section -->
     <div class="shop-online">
