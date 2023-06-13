@@ -3,7 +3,6 @@
 <head>
   <title>DXM - Atelier</title>
   <link rel="icon" type="image/png" href="favicon-32x32.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
@@ -34,29 +33,116 @@
       background-size: contain;
     }
 
-    /* More CSS rules... */
+    .contact-form {
+      margin-bottom: 40px;
+    }
 
-    /* Responsive Styles */
-    @media screen and (max-width: 600px) {
-      .container {
-        margin: 10px auto;
-        padding: 20px;
-        border-radius: 10px;
-      }
-      
-      .logo {
-        top: -25px;
-        width: 150px;
-        height: 50px;
-      }
+    .form-input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      color: #333;
+      font-size: 16px;
+    }
 
-      .equipment-container {
-        flex-direction: column;
-      }
+    .form-input:focus {
+      outline: none;
+      border-color: #999;
+    }
 
-      .equipment-item {
-        margin: 10px 0;
-      }
+    .form-button {
+      width: 100%;
+      padding: 15px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-button:hover {
+      background-color: #0056b3;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .form-check {
+      margin-bottom: 20px;
+    }
+
+    .form-check-input {
+      margin-right: 10px;
+    }
+
+    .form-check-label {
+      font-size: 14px;
+    }
+
+    .parallax-1 {
+      background-image: url("https://images.pexels.com/photos/17089369/pexels-photo-17089369.jpeg");
+    }
+
+    .parallax-2 {
+      background-image: url("https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    }
+
+    .parallax-3 {
+      background-image: url("https://images.pexels.com/photos/14666017/pexels-photo-14666017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    }
+
+    /* Parallax container */
+    .parallax {
+      /* Set a specific height */
+      min-height: 500px; 
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Equipment Section */
+    .equipment-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .equipment-item {
+      flex: 1;
+      margin: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .equipment-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transform: scale(1.1);
+      transition: transform 0.5s ease-out;
+    }
+
+    .equipment-item:hover img {
+      transform: scale(1);
     }
   </style>
 </head>
@@ -106,11 +192,6 @@
         <button class="form-button" type="submit">Envoyer</button>
       </form>
     </div>
-
-    <!-- Rest of your HTML... -->
-  </div>
-</body>
-</html>
 
     <!-- Parallax Section -->
     <div class="parallax parallax-1"></div>
