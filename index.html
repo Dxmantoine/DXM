@@ -121,9 +121,16 @@
     /* Equipment Section */
     .equipment-container {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
       margin-top: 40px;
+    }
+
+    .equipment-title {
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .equipment-item {
@@ -144,6 +151,24 @@
 
     .equipment-item:hover img {
       transform: scale(1);
+    }
+
+    /* Video Section */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     /* Responsive Styles */
@@ -177,43 +202,43 @@
     <div class="contact-form">
       <form action="https://formspree.io/f/xdovrkgv" method="POST">
         <label>
-          Nom:
-          <input type="text" name="nom" class="form-input">
-        </label>
-        <label>
-          Prénom:
-          <input type="text" name="prenom" class="form-input">
-        </label>
-        <label>
-          Mail:
-          <input type="email" name="email" class="form-input">
-        </label>
-        <label>
-          Téléphone:
-          <input type="text" name="telephone" class="form-input">
-        </label>
-        <label>
-          Atelier souhaité:
-          <select name="atelier" class="form-input">
-            <option value="photo">Photo</option>
-            <option value="video">Vidéo</option>
-            <option value="cloud">Cloud</option>
-            <option value="bureautique">Bureautique</option>
-            <option value="autre">Autre</option>
-          </select>
-        </label>
-        <label>
-          Soumettez vos idées:
-          <textarea name="idees" class="form-input"></textarea>
-        </label>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="check1" name="rgpd">
-          <label class="form-check-label" for="check1">J'accepte les conditions générales et la politique de confidentialité.</label>
-        </div>
-        <input type="hidden" name="_subject" value="New form submission">
-        <input type="hidden" name="_next" value="https://votre-site-web.com/merci.html">
-        <input type="hidden" name="_cc" value="beilvert.a@dxm.fr">
-        <button class="form-button" type="submit">Envoyer</button>
+            Nom:
+            <input type="text" name="nom" class="form-input">
+          </label>
+          <label>
+            Prénom:
+            <input type="text" name="prenom" class="form-input">
+          </label>
+          <label>
+            Mail:
+            <input type="email" name="email" class="form-input">
+          </label>
+          <label>
+            Téléphone:
+            <input type="text" name="telephone" class="form-input">
+          </label>
+          <label>
+            Atelier souhaité:
+            <select name="atelier" class="form-input">
+              <option value="photo">Photo</option>
+              <option value="video">Vidéo</option>
+              <option value="cloud">Cloud</option>
+              <option value="bureautique">Bureautique</option>
+              <option value="autre">Autre</option>
+            </select>
+          </label>
+          <label>
+            Soumettez vos idées:
+            <textarea name="idees" class="form-input"></textarea>
+          </label>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check1" name="rgpd">
+            <label class="form-check-label" for="check1">J'accepte les conditions générales et la politique de confidentialité.</label>
+          </div>
+          <input type="hidden" name="_subject" value="New form submission">
+          <input type="hidden" name="_next" value="https://votre-site-web.com/merci.html">
+          <input type="hidden" name="_cc" value="beilvert.a@dxm.fr">
+          <button class="form-button" type="submit">Envoyer</button>
       </form>
     </div>
 
@@ -222,7 +247,7 @@
 
     <!-- Equipment Section -->
     <section class="equipment-container">
-      <h2>Matériel utilisé lors de nos ateliers</h2>
+      <h2 class="equipment-title">Matériel utilisé lors de nos ateliers</h2>
 
       <div class="equipment-item">
         <img src="https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="MacBook">
@@ -248,7 +273,13 @@
       <h2>Boutique en ligne</h2>
       <p>Visitez notre <a href="https://www.dxm.fr/" target="_blank">boutique en ligne</a> pour découvrir et acheter nos produits.</p>
     </div>
-
+    <div class="video-container">
+        <video autoplay loop muted>
+            <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FApplePremiumReseller%2Fvideos%2F617043953710390%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        
+        </video>
+      </div>
+      
     <div class="contact-details">
       <h2>Coordonnées</h2>
       <p><strong>Adresse :</strong> 3 allées des tanneurs, Nantes, France</p>
