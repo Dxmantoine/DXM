@@ -24,14 +24,13 @@
     }
 
     .logo {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: url('https://res.cloudinary.com/westfielddg/image/upload/westfield-media/fr/store/mobile-logo/rno9b9h01hx2yupnrzoq.png') no-repeat center;
-      width: 300px;
-      height: 100px;
-      background-size: contain;
+      margin-bottom: 30px; /* Ajout d'une marge en bas pour éviter le chevauchement */
+      text-align: center; /* Centrage horizontal du logo */
+    }
+
+    .logo img {
+      max-width: 300px;
+      height: auto;
     }
 
     .contact-form {
@@ -181,10 +180,9 @@
         border-radius: 10px;
       }
       
-      .logo {
-        top: -25px;
-        width: 150px;
-        height: 50px;
+      .logo img {
+        max-width: 150px;
+        height: auto;
       }
 
       .equipment-container {
@@ -199,7 +197,9 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo"></div>
+    <div class="logo">
+      <img src="https://res.cloudinary.com/westfielddg/image/upload/westfield-media/fr/store/mobile-logo/rno9b9h01hx2yupnrzoq.png" alt="Logo">
+    </div>
 
     <div class="contact-form">
       <form action="https://formspree.io/f/xdovrkgv" method="POST">
@@ -277,8 +277,7 @@
     </div>
     <div class="video-container">
         <video autoplay loop muted>
-            <source src="<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FApplePremiumReseller%2Fvideos%2F617043953710390%2F&show_text=false&width=476&t=0" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>" type="video/mp4">
-            <!-- Fournissez des sources supplémentaires pour les différents formats vidéo -->
+            <source src="<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FApplePremiumReseller%2Fvideos%2F617043953710390%2F&show_text=false&width=476&t=0" width="476" height="476" style
         </video>
     </div>
       
